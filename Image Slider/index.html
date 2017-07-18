@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Title of the document</title>
+        <title>Breaking Bad</title>
 
         <!--Styles-->
         <link type="text/css" rel="stylesheet" href="styles.css" />
@@ -11,42 +11,49 @@
         
             
         <header>
-             Farewell Photo Gallery
+             Breaking Bad
         </header>
         <div id="imageSlider">
             <div id="leftArrow">&lt</div>
             <div id="imageContainer" onmousedown="scriptOutput.mouseDownHandler()" onmouseup="scriptOutput.mouseUpHandler()">
                 <ul id="imageList">
                     <li class="listElement" id="firstLiElement">
-                        <img src="Images/bb1.jpg" draggable="false"></img>
+                        <img 
+                            src="Images/bb1.jpg" 
+                            draggable="false" 
+                            onclick="scriptOutput.clickOnImgHandle(event)"
+
+                            ></img>
                     </li>
                     <li class="listElement">
-                        <img src="Images/bb2.jpg" draggable="false"></img>
+                        <img src="Images/bb2.jpg" draggable="false" onclick="scriptOutput.clickOnImgHandle(event)"></img>
                     </li>
                     <li class="listElement">
-                        <img src="Images/bb3.jpg" draggable="false"></img>
+                        <img src="Images/bb3.jpg" draggable="false" onclick="scriptOutput.clickOnImgHandle(event)"></img>
                     </li>
                     <li class="listElement">
-                        <img src="Images/bb4.jpg" draggable="false"></img>
+                        <img src="Images/bb4.jpg" draggable="false" onclick="scriptOutput.clickOnImgHandle(event)"></img>
                     </li>
                     <li class="listElement">
-                        <img src="Images/bb5.jpg" draggable="false"></img>
+                        <img src="Images/bb5.jpg" draggable="false" onclick="scriptOutput.clickOnImgHandle(event)"></img>
                     </li>
                     <li class="listElement">
-                        <img src="Images/bb6.jpg" draggable="false"></img>
+                        <img src="Images/bb6.jpg" draggable="false" onclick="scriptOutput.clickOnImgHandle(event)"></img>
                     </li>
                     <li class="listElement">
-                        <img src="Images/bb7.jpg" draggable="false"></img>
+                        <img src="Images/bb7.jpg" draggable="false" onclick="scriptOutput.clickOnImgHandle(event)"></img>
                     </li>
                     <li class="listElement">
-                        <img src="Images/bb8.jpg" draggable="false"></img>
+                        <img src="Images/bb8.jpg" draggable="false" onclick="scriptOutput.clickOnImgHandle(event)"></img>
                     </li>
                 </ul>
             </div>
             <div id="rightArrow">&gt</div>
         </div>  
-                
-
+           
+        <!-- TO Pop Up Image -->
+        <div id="overlay"></div>
+        
         <!--Scripts-->
         <script src="index.js"></script>
     </body>
