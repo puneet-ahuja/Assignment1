@@ -9,7 +9,7 @@ function Curry(fn){
               if(count == 0){
                   tempArgs = [];
               }
-          debugger;
+   
     	var argsArr = Array.prototype.slice.call(arguments);
       
         if(pos >= fn.length){
@@ -59,15 +59,14 @@ function Curry(fn){
 
 }
 
-function sum(a,b,c){
-	return a+b+c;
+function printArgsInSequence(a,b,c){
+	return "First Argument : " + a + "\nSecond Argument :" + b + "\nThird Argument :" + c;
 }
 
-var newSum = Curry(sum);
+var printInSeq = Curry(printArgsInSequence);
 
-console.log("SUm is " + newSum(1)(2)(3));
-
-
-console.log("SUm is " + newSum(1)(2,3));
-
-newSum(1)(2,3))
+printInSeq(1)(2)(3);
+printInSeq(1)()(2)(3);
+printInSeq(1,2)(3);
+printInSeq(1)(2,3);
+printInSeq(1,'*')(3)(2);
