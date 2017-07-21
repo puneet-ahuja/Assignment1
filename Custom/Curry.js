@@ -1,7 +1,7 @@
 function Curry(fn){
     var count = 0;
     var pos = 0;
-    var tempArgs = new Array(fn.length);
+    var tempArgs = undefined;
     var remPosition = [];
   
     if(count < fn.length){
