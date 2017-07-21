@@ -36,12 +36,13 @@ function partialRight(fn){
 	var currentThis = this;
 	return function(){
 		var argsInArr = Array.prototype.slice.call(arguments);
-		var finalArgs = undefined;
+		var finalArgs = argsInArr.concat(start_args);
 		if(arguments.length + start_args.length >= fn.length){
 			finalArgs = finalArgs.splice(finalArgs.length - fn.length,finalArgs.length)
 		}
 		else{
 			argsInArr[ fn.length - start_args.length -1] = undefined;
+			finalArgs = argsInArr.concat(start_args);
 		}
 		return fn.apply(currentThis,finalArgs);
 	}
