@@ -1,17 +1,17 @@
 
-
+//Function to reduce from left side
 function CustomReduce(callback , initialValue){
 
     var accumulator = undefined;
     var element = undefined;
     var index = undefined;
 
+    //handle Error Case
     if(initialValue === undefined  && this.length == 0){
         throw new TypeError("CustomReduce of empty array with no initial value");
     }
+    
     accumulator = initialValue || this[0];
-
-    ;
 
     for( index = initialValue ? 0:1 ; index < this.length ; index++){
 
@@ -53,7 +53,7 @@ function CustomReduceRight(callback , initialValue){
     }
     accumulator = initialValue || this[this.length-1];
 
-    ;
+  
 
     for( index = initialValue?this.length-1: this.length-2 ; index >= 0  ; index--){
 
@@ -79,7 +79,7 @@ function sum(a,b){
 arr.CustomReduceRight(sum , 0);
 
 var a = ['1', '2', '3', '4', '5']; 
-var left  = a.reduce(function(prev, cur)      { return prev + cur; }); 
+var left  = a.CustomReduce(function(prev, cur)      { return prev + cur; }); 
 var right = a.CustomReduceRight(function(prev, cur) { return prev + cur; }); 
 
 console.log(left);  // "12345"
