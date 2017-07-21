@@ -40,6 +40,7 @@ function setSetting(pathInArr , value , canReset){
         
     }
 
+    //Loop For remaining properties
     for (var prop in this) {
             // skip loop if the property is from prototype
             if(!this.hasOwnProperty(prop)) continue;
